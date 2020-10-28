@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Customer";
+}
+
+<h2>Customer</h2>
+
+<div class="form-group col-md-12">
+    @using (Html.BeginForm("UpdateCustomer", "Home", FormMethod.Post))
+    {
+    <form action="~/Controllers/HomeController/Create">
+        <fieldset>
+            <div>
+                <br />
+                <div class="form-group row" style="margin-bottom:15px">
+                    <label for="inputIDnumber">ID Number</label>
+                    <input type="text" class="form-control" name="inputIDnumber" placeholder="Please input ID number" value="@ViewBag.Id" required>
+                </div>
+                <div class="form-group row" style="margin-bottom:15px">
+                    <label for="inputFirstname">First Name</label>
+                    <input type="text" class="form-control" name="inputFirstname" placeholder="Please input First name" value="@ViewBag.Firstname" required>
+                </div>
+                <div class="form-group row" style="margin-bottom:15px">
+                    <label for="inputlastname">First Name</label>
+                    <input type="text" class="form-control" name="inputlastname" placeholder="Please input Last name" value="@ViewBag.lastname" required>
+                </div>
+                <div class="form-group row" style="margin-bottom:15px">
+                    <label for="inputCell">End Time</label>
+                    <input type="text" class="form-control" name="inputCell" placeholder="Please input Mobile number" value="@ViewBag.Mobile" required>
+                </div>
+                <div class="form-group row" style="margin-bottom:15px">
+                    <label for="inputEmail">End Time</label>
+                    <input type="text" class="form-control" name="inputEmail" placeholder="Please input Email" value="@ViewBag.Email">
+                </div>
+            </div>
+            <label for="inputIDnumber" style="color:red">@ViewBag.Message</label>
+        </fieldset>
+       
+        <input type="submit" value="Update" class="btn btn-primary js-scroll-trigger col-md-12" />
+    </form>
+    }
+</div>

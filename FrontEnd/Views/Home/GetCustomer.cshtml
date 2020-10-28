@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Find Customer";
+}
+
+<h2>Find Customer</h2>
+
+<div class="form-group col-md-12">
+    @using (Html.BeginForm("ViewCustomer", "Home", FormMethod.Post))
+    {
+        <form action="~/Controllers/HomeController/Create">
+            <fieldset>
+                <div>
+                    <br />
+                    <div class="form-group row" style="margin-bottom:15px">
+                        <label for="inputIDnumber">ID Number</label>
+                        <input type="text" class="form-control" name="inputIDnumber" placeholder="Please input ID number" required>
+                    </div>                   
+                </div>
+            </fieldset>
+            <input type="submit" value="Search" class="btn btn-primary js-scroll-trigger col-md-12" />
+        </form>
+    }
+</div>
